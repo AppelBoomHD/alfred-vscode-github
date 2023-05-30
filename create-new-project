@@ -1,0 +1,52 @@
+#!/bin/bash
+
+DIR=$1
+REPO_NAME=$2
+
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+check_error () {
+    if [ $? -gt 0 ]
+    then
+        if [ $1 = true ]; then rm -rf $REPO_NAME; fi
+
+        if [[ "$OUTPUT" == *"internet"* ]]
+        then
+            ERRMSG="No internet connection"
+        elif [[ "$OUTPUT" == *"name already exists"* ]]
+        then
+            ERRMSG="GitHub repo with name $bold$REPO_NAME$normal already exists"
+        elif [[ "$OUTPUT" == *"file exists"* ]]
+        then
+            ERRMSG="Project folder with name $bold$REPO_NAME$normal already exists"
+        else
+            ERRMSG=$OUTPUT
+        fi
+        
+        echo "{\"items\":[{\"title\":\"Error\",\"subtitle\":\"$ERRMSG\"}]}"
+        exit 1
+    fi
+}
+
+cd $DIR
+OUTPUT=$(mkdir $REPO_NAME 2>&1 > /dev/null)
+check_error
+# Call the GitHub API to create the repository
+OUTPUT=$(curl -X POST "https://api.github.com/user/repos" \
+     -H "Authorization: Bearer $ACCESS_TOKEN" \
+     -H "Accept: application/vnd.github+json" \
+     -d "{\"name\":\"$REPO_NAME\", \"private\":$REPO_PRIVATE}")
+echo $OUTPUT
+check_error true
+REPO_URL=$(echo $OUTPUT | jq -r '.clone_url')
+cd $REPO_NAME
+
+echo "# $REPO_NAME" >> README.md
+git init
+git add README.md
+git commit -m "$COMMIT_MSG"
+git branch -M main
+git remote add origin $REPO_URL
+git push -u origin main
+code .
