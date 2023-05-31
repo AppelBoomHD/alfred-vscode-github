@@ -1,0 +1,23 @@
+{
+  "name": "alfred-vscode-github",
+  "version": "1.0.0",
+  "description": "Open or create new Visual Studio Code project and create GitHub repository",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "alfred-link",
+    "release": "npx standard-version && git push --follow-tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AppelBoomHD/alfred-vscode-github.git"
+  },
+  "author": "Julian Riemersma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AppelBoomHD/alfred-vscode-github/issues"
+  },
+  "homepage": "https://github.com/AppelBoomHD/alfred-vscode-github#readme",
+  "dependencies": {
+    "alfred-link": "^0.3.1"
+  }
+}
