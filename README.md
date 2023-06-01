@@ -31,9 +31,9 @@ npm install --global alfred-vscode-github
 
 ### Configuration
 
-1. [Generate GitHub authentication token](https://github.com/settings/tokens/new?description=GitHub%20Repos%20Alfred%20workflow&scopes=repo)
+1. [Generate GitHub authentication token](https://github.com/settings/tokens/new?description=GitHub%20Repos%20Alfred%20workflow&scopes=repo).
 2. Simply copy and paste this token into the user configuration.
-3. Select your project directory in the user configuration
+3. Select your project directory in the user configuration.
 
 ## Inspiration
 
