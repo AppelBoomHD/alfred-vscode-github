@@ -1,6 +1,6 @@
 {
   "name": "alfred-vscode-github",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Open or create new Visual Studio Code project and create GitHub repository",
   "main": "index.js",
   "scripts": {
