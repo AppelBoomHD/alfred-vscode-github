@@ -18,7 +18,7 @@
 
 ### Automatic
 
-Run this command in your shell to automatically install the workflow
+Run this command in your shell to automatically install the workflow:
 
 ```bash
 npm install --global alfred-vscode-github
