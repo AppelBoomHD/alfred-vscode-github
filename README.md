@@ -26,7 +26,7 @@ npm install --global alfred-vscode-github
 
 ### Manual
 
-1. Download the [workflow file](https://github.com/AppelBoomHD/alfred-vscode-github/releases/download/v1.0.1/alfred-vscode-github.alfredworkflow).
+1. Download the [workflow file](https://github.com/AppelBoomHD/alfred-vscode-github/releases/latest/download/alfred-vscode-github.alfredworkflow).
 2. Double-click the downloaded file to install the workflow.
 
 ### Configuration
