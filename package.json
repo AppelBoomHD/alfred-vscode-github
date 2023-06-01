@@ -4,8 +4,7 @@
   "description": "Open or create new Visual Studio Code project and create GitHub repository",
   "main": "index.js",
   "scripts": {
-    "postinstall": "alfred-link",
-    "release": "npx standard-version && git push --follow-tags && npm publish"
+    "postinstall": "alfred-link"
   },
   "repository": {
     "type": "git",

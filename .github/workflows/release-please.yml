@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: release-please
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          package-name: alfred-vscode-github
+          extra-files:
+            - type: xml
+              path: info.plist
+              xpath: //plist/dict/key[text()='version']/following-sibling::string[1]
