@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.julianriemersma.newproject</string>
+	<string>com.julianriemersma.aldred-vscode-github</string>
 	<key>category</key>
 	<string>Productivity</string>
 	<key>connections</key>
@@ -555,7 +555,7 @@ Requirements:
 				<key>default</key>
 				<string></string>
 				<key>filtermode</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>placeholder</key>
 				<string>~/Developer</string>
 				<key>required</key>
@@ -637,8 +637,6 @@ Requirements:
 			<string>INC_SUBDIRS</string>
 		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string>1.0.1</string>
 	<key>webaddress</key>
