@@ -17,7 +17,5 @@ jobs:
         with:
           release-type: node
           package-name: alfred-vscode-github
-          extra-files:
-            - type: xml
-              path: info.plist
-              xpath: //plist/dict/key[text()='version']/following-sibling::string[1]
+          extra-files: |
+            info.plist
