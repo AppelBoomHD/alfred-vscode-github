@@ -574,7 +574,7 @@ Requirements:
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>Initial commit 🔥</string>
+				<string>Initial commit!</string>
 				<key>placeholder</key>
 				<string>Initial commit!</string>
 				<key>required</key>
