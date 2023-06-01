@@ -17,6 +17,7 @@ jobs:
         with:
           release-type: node
           package-name: alfred-vscode-github
+          token: ${{ secrets.GH_TOKEN }}
           extra-files: |
             info.plist
       - uses: actions/checkout@v2
