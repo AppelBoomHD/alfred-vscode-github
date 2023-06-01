@@ -638,7 +638,7 @@ Requirements:
 		</dict>
 	</array>
 	<key>version</key>
-	<string>1.2.2</string> <!-- x-release-please-version -->
+	<string>1.2.3</string> <!-- x-release-please-version -->
 	<key>webaddress</key>
 	<string>https://github.com/AppelBoomHD/alfred-vscode-github</string>
 </dict>

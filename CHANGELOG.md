@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.3](https://github.com/AppelBoomHD/alfred-vscode-github/compare/v1.2.2...v1.2.3) (2023-06-01)
+
+
+### Bug Fixes
+
+* fix linking error on install ([fb68a60](https://github.com/AppelBoomHD/alfred-vscode-github/commit/fb68a607d798644fb8053bcdc96e2437a50012d9))
+
 ## [1.2.2](https://github.com/AppelBoomHD/alfred-vscode-github/compare/v1.2.1...v1.2.2) (2023-06-01)
 
 
