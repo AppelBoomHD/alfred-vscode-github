@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.4](https://github.com/AppelBoomHD/alfred-vscode-github/compare/v1.2.3...v1.2.4) (2023-06-02)
+
+
+### Bug Fixes
+
+* **newproject:** simplify newproject logic and fix bug caused by bundleid change ([261660b](https://github.com/AppelBoomHD/alfred-vscode-github/commit/261660b5170d85dcd4e268110cdd32d00e933d9e))
+
 ## [1.2.3](https://github.com/AppelBoomHD/alfred-vscode-github/compare/v1.2.2...v1.2.3) (2023-06-01)
 
 
