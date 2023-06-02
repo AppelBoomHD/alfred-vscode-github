@@ -41,19 +41,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>363F9159-6B45-4E2E-A5B4-2DE5657ECE4B</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>858632C6-B121-4663-85F6-C5A9873284C3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>5A27E443-BD1B-45D9-A3F1-1316856C9B05</key>
 		<array>
 			<dict>
@@ -84,13 +71,13 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>97AD1C05-4349-479B-8A3E-D8E52012A2FE</string>
+				<string>858632C6-B121-4663-85F6-C5A9873284C3</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<true/>
+				<false/>
 			</dict>
 		</array>
 		<key>E291008F-8BB4-4EF7-B3CB-272BA3511E33</key>
@@ -214,25 +201,49 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>script</key>
-				<string>tell application id "com.runningwithcrayons.Alfred" to run trigger "enter_name" in workflow "com.julianriemersma.newproject" with argument "{query}"</string>
+				<string>echo '{"items":[{"title":"Enter a name for your project","subtitle":"Create project with name: {query}","arg":"{query}"}]}'</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
 				<key>type</key>
-				<integer>6</integer>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>97AD1C05-4349-479B-8A3E-D8E52012A2FE</string>
+			<string>5A27E443-BD1B-45D9-A3F1-1316856C9B05</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -334,49 +345,22 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
 				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>echo '{"items":[{"title":"Enter a name for your project","subtitle":"Create project with name: {query}","arg":"{query}"}]}'</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
+				<key>variables</key>
+				<dict>
+					<key>name</key>
+					<string>{query}</string>
+				</dict>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>5A27E443-BD1B-45D9-A3F1-1316856C9B05</string>
+			<string>E291008F-8BB4-4EF7-B3CB-272BA3511E33</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -395,41 +379,6 @@
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>858632C6-B121-4663-85F6-C5A9873284C3</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>enter_name</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>363F9159-6B45-4E2E-A5B4-2DE5657ECE4B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>name</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>E291008F-8BB4-4EF7-B3CB-272BA3511E33</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -455,33 +404,19 @@ Requirements:
 			<key>ypos</key>
 			<real>135</real>
 		</dict>
-		<key>363F9159-6B45-4E2E-A5B4-2DE5657ECE4B</key>
-		<dict>
-			<key>xpos</key>
-			<real>85</real>
-			<key>ypos</key>
-			<real>575</real>
-		</dict>
 		<key>5A27E443-BD1B-45D9-A3F1-1316856C9B05</key>
 		<dict>
 			<key>xpos</key>
-			<real>365</real>
+			<real>430</real>
 			<key>ypos</key>
-			<real>525</real>
+			<real>385</real>
 		</dict>
 		<key>858632C6-B121-4663-85F6-C5A9873284C3</key>
 		<dict>
 			<key>xpos</key>
-			<real>255</real>
+			<real>305</real>
 			<key>ypos</key>
-			<real>555</real>
-		</dict>
-		<key>97AD1C05-4349-479B-8A3E-D8E52012A2FE</key>
-		<dict>
-			<key>xpos</key>
-			<real>765</real>
-			<key>ypos</key>
-			<real>360</real>
+			<real>415</real>
 		</dict>
 		<key>A5353D46-9C5F-4865-9212-8B4E1C87AD54</key>
 		<dict>
@@ -500,23 +435,23 @@ Requirements:
 		<key>B9AF71AE-A337-418C-8966-05F760413F18</key>
 		<dict>
 			<key>xpos</key>
-			<real>85</real>
+			<real>90</real>
 			<key>ypos</key>
-			<real>380</real>
+			<real>385</real>
 		</dict>
 		<key>E291008F-8BB4-4EF7-B3CB-272BA3511E33</key>
 		<dict>
 			<key>xpos</key>
-			<real>635</real>
+			<real>660</real>
 			<key>ypos</key>
-			<real>605</real>
+			<real>415</real>
 		</dict>
 		<key>ED3EBE6A-2F43-4EA1-BD26-DBAB43136B70</key>
 		<dict>
 			<key>xpos</key>
-			<real>855</real>
+			<real>795</real>
 			<key>ypos</key>
-			<real>510</real>
+			<real>385</real>
 		</dict>
 		<key>F828728B-118D-4AC6-8AF8-60A3663C3548</key>
 		<dict>
@@ -638,8 +573,8 @@ Requirements:
 		</dict>
 	</array>
 	<key>version</key>
-	<string>1.2.3</string> <!-- x-release-please-version -->
+	<string>1.2.3</string>
 	<key>webaddress</key>
-	<string>https://github.com/AppelBoomHD/alfred-vscode-github</string>
+	<string>https://github.com/AppelBoomHD/alfred-vscode-github#readme</string>
 </dict>
 </plist>
