@@ -1,4 +1,4 @@
-const { readdirSync } = require("fs");
+const { readdirSync, Dirent } = require("fs");
 
 const PROJECT_DIR = process.env.PROJECT_DIR;
 const INC_SUBDIRS = !!+process.env.INC_SUBDIRS;
@@ -10,6 +10,16 @@ const getDirectories = (source) =>
     .map((dirent) => dirent.name);
 
 const dirs = getDirectories(PROJECT_DIR);
+
+const isGitRepo = (dir) => {
+  for (const project of getDirectories(`${PROJECT_DIR}/${dir}`)) {
+    if (project == '.git') {
+      return true;
+    }
+  }
+
+  return false;
+}
 
 const items = [];
 if (action === "new") {
@@ -32,20 +42,24 @@ if (action === "new") {
   if (INC_SUBDIRS) {
     dirs.forEach((dir) => {
       getDirectories(`${PROJECT_DIR}/${dir}`).forEach((project) => {
-        items.push({
-          title: project,
-          subtitle: `Open project \`${project}\` from directory \`${dir}\``,
-          arg: `${PROJECT_DIR}/${dir}/${project}`,
-        });
+        if (isGitRepo(`${dir}/${project}`)) {
+          items.push({
+            title: project,
+            subtitle: `Open project \`${project}\` from directory \`${dir}\``,
+            arg: `${PROJECT_DIR}/${dir}/${project}`,
+          });
+        }
       });
     });
   } else {
     dirs.forEach((project) => {
-      items.push({
-        title: project,
-        subtitle: `Open project \`${project}\``,
-        arg: `${PROJECT_DIR}/${project}`,
-      });
+      if (isGitRepo(project)) { 
+        items.push({
+          title: project,
+          subtitle: `Open project \`${project}\``,
+          arg: `${PROJECT_DIR}/${project}`,
+        });
+      }
     });
   }
 }
