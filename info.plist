@@ -556,6 +556,25 @@ Requirements:
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>True</string>
+			</dict>
+			<key>description</key>
+			<string>Do the projects have a .git file?</string>
+			<key>label</key>
+			<string>Projects have a git file</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>WITH_GITFILE</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<false/>
 				<key>required</key>
 				<false/>
@@ -572,8 +591,10 @@ Requirements:
 			<string>INC_SUBDIRS</string>
 		</dict>
 	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>1.2.3</string>
+	<string>1.2.5</string>
 	<key>webaddress</key>
 	<string>https://github.com/AppelBoomHD/alfred-vscode-github#readme</string>
 </dict>
