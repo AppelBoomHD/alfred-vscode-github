@@ -1,5 +1,6 @@
 // Import necessary modules
-const { readdirSync } = require("fs");
+const { readdirSync, existsSync } = require("fs");
+const { join } = require("path");
 
 // Get environment variables
 const PROJECT_DIR = process.env.PROJECT_DIR;
@@ -15,10 +16,11 @@ const getDirectories = (source) =>
 
 // Function to check if a directory contains a ".git" subdirectory
 const isGitRepo = (dir) => {
-  if (WITH_GITFILE) {
-    return getDirectories(`${PROJECT_DIR}/${dir}`).includes(".git");
+  if (action === "open" && WITH_GITFILE) {
+    const gitPath = join(PROJECT_DIR, dir, ".git");
+    return existsSync(gitPath) && readdirSync(gitPath).length > 0;
   } else {
-    return true; // Always include the directory if WITH_GITFILE is not checked
+    return true; // Always include the directory for new projects or when WITH_GITFILE is not checked
   }
 };
 
