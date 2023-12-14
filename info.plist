@@ -563,9 +563,9 @@ Requirements:
 				<string>True</string>
 			</dict>
 			<key>description</key>
-			<string>Do the projects have a .git file?</string>
+			<string>Only list projects that contain a .git folder</string>
 			<key>label</key>
-			<string>Projects have a git file</string>
+			<string>Only list git repos</string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>
