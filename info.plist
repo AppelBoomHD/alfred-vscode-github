@@ -96,10 +96,6 @@
 		<key>ED3EBE6A-2F43-4EA1-BD26-DBAB43136B70</key>
 		<array/>
 	</dict>
-	<key>createdby</key>
-	<string>Julian Riemersma</string>
-	<key>description</key>
-	<string>Open or create new Visual Studio Code project and create GitHub repository</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -591,9 +587,5 @@ Requirements:
 			<string>INC_SUBDIRS</string>
 		</dict>
 	</array>
-	<key>version</key>
-	<string>1.2.3</string>
-	<key>webaddress</key>
-	<string>https://github.com/AppelBoomHD/alfred-vscode-github#readme</string>
 </dict>
 </plist>
