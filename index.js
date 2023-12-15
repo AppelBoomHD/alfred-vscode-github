@@ -40,15 +40,13 @@ if (action === "new") {
       );
     });
   } else {
-    if (isGitRepo("")) {
-      items.push(
-        createItem(
-          "New Project",
-          `Create project in directory: \`${PROJECT_DIR}\``,
-          PROJECT_DIR
-        )
-      );
-    }
+    items.push(
+      createItem(
+        "New Project",
+        `Create project in directory: \`${PROJECT_DIR}\``,
+        PROJECT_DIR
+      )
+    );
   }
 } else if (action === "open") {
   // Process projects for opening
