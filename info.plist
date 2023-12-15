@@ -556,6 +556,25 @@ Requirements:
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>True</string>
+			</dict>
+			<key>description</key>
+			<string>Only list projects that contain a .git folder</string>
+			<key>label</key>
+			<string>Only list git repos</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>WITH_GITFILE</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<false/>
 				<key>required</key>
 				<false/>
