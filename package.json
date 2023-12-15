@@ -10,7 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/AppelBoomHD/alfred-vscode-github.git"
   },
-  "author": "Julian Riemersma",
+  "author": {
+    "name": "Julian Riemersma",
+    "email": "julianriemersma@gmail.com",
+    "url": "https://github.com/AppelBoomHD"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/AppelBoomHD/alfred-vscode-github/issues"
