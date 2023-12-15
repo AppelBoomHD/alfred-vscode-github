@@ -9,17 +9,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 * :sparkles: New feature to check for .git directory in project directories ([635f28d](https://github.com/AppelBoomHD/alfred-vscode-github/commit/635f28d260637b7a22bce8b9825fe40e8cdefcc7))
 
-
-### Bug Fixes
-
-* fix open project subtitle without inc_subdirs ([0d1acd4](https://github.com/AppelBoomHD/alfred-vscode-github/commit/0d1acd463229b2f6b19925befa25a0e3a937c4a1))
-* fix with_gitfile feature ([7a3e2b2](https://github.com/AppelBoomHD/alfred-vscode-github/commit/7a3e2b2f8f7e643b28c9a9da49fb2e7e5bb484a0))
-
-
-### Reverts
-
-* revert to version 1.2.3 and remove variablesdontexport ([be3705b](https://github.com/AppelBoomHD/alfred-vscode-github/commit/be3705bb093ec16d9d0b148162186cea0017abb3))
-
 ## [1.2.4](https://github.com/AppelBoomHD/alfred-vscode-github/compare/v1.2.3...v1.2.4) (2023-06-02)
 
 
