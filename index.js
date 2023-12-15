@@ -23,7 +23,7 @@ const isGitRepo = (path) => {
 // Process projects for opening
 const processDirs = (dir, project) => {
   const fullPath = join(PROJECT_DIR, dir, project);
-  if (isGitRepo(fullPath)) {
+  if (!WITH_GITFILE || isGitRepo(fullPath)) {
     items.push(
       createItem(
         project,
