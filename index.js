@@ -15,9 +15,24 @@ const getDirectories = (source) =>
     .map((dirent) => dirent.name);
 
 // Function to check if a directory contains a ".git" subdirectory
-const isGitRepo = (dir) => {
-  const gitPath = join(PROJECT_DIR, dir, ".git");
+const isGitRepo = (path) => {
+  const gitPath = join(path, ".git");
   return existsSync(gitPath) && readdirSync(gitPath).length > 0;
+};
+
+// Process projects for opening
+const processDirs = (dir, project) => {
+  const fullPath = join(PROJECT_DIR, dir, project);
+  if (isGitRepo(fullPath)) {
+    items.push(
+      createItem(
+        project,
+        `Open project \`${project}\`` +
+          (dir ? `from directory \`${dir}\`` : ""),
+        fullPath
+      )
+    );
+  }
 };
 
 // Function to create an item object
@@ -49,20 +64,6 @@ if (action === "new") {
     );
   }
 } else if (action === "open") {
-  // Process projects for opening
-  const processDirs = (dir, project) => {
-    const fullPath = `${PROJECT_DIR}/${dir}/${project}`;
-    if (isGitRepo(`${dir}/${project}`)) {
-      items.push(
-        createItem(
-          project,
-          `Open project \`${project}\` from directory \`${dir}\``,
-          fullPath
-        )
-      );
-    }
-  };
-
   // Check whether to include subdirectories
   if (INC_SUBDIRS) {
     getDirectories(PROJECT_DIR).forEach((dir) => {
