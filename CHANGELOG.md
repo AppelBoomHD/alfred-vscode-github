@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/AppelBoomHD/alfred-vscode-github/compare/v1.2.4...v1.3.0) (2023-12-15)
+
+
+### Features
+
+* :sparkles: New feature to check for .git directory in project directories ([635f28d](https://github.com/AppelBoomHD/alfred-vscode-github/commit/635f28d260637b7a22bce8b9825fe40e8cdefcc7))
+
 ## [1.2.4](https://github.com/AppelBoomHD/alfred-vscode-github/compare/v1.2.3...v1.2.4) (2023-06-02)
 
 
